@@ -23,7 +23,7 @@ const AddReview = () => {
     }, [user])
     const getreviewss = async () => {
 
-        axios.get(`http://localhost:7000/api/v1/review/myreview/${user?.email}`,)
+        axios.get(`https://service-review-api-main.vercel.app/api/v1/review/myreview/${user?.email}`,)
             .then(res => {
                 setReviewAll(res.data?.review)
 
@@ -43,7 +43,7 @@ const AddReview = () => {
         })
             .then(willDelete => {
                 if (willDelete) {
-                    axios.delete(`http://localhost:7000/api/v1/review/reviews/${id}`,)
+                    axios.delete(`https://service-review-api-main.vercel.app/api/v1/review/reviews/${id}`,)
                         .then(res => {
                             getreviewss()
 

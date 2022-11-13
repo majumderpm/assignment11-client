@@ -24,7 +24,7 @@ const Login = () => {
                     picture: user?.photoURL
                 }
 
-                axios.post('http://localhost:7000/api/v1/token/register', currentUser)
+                axios.post('https://service-review-api-main.vercel.app/api/v1/token/register', currentUser)
                     .then(res => {
 
 
@@ -54,7 +54,7 @@ const Login = () => {
                         email: user.email
                     }
 
-                    axios.post('http://localhost:7000/api/v1/token/login', currentUser)
+                    axios.post('https://service-review-api-main.vercel.app/api/v1/token/login', currentUser)
                         .then(res => {
                             console.log(res)
                             const token = res.data.token;
@@ -82,21 +82,21 @@ const Login = () => {
 
                     formData.append("avatar", imgPrev);
 
-                    axios.post('http://localhost:7000/profile', formData)
+                    axios.post('https://service-review-api-main.vercel.app/profile', formData)
                         .then(res => {
                             console.log(res.data?.result?.filename)
                             const profile = {
-                                displayName: username, photoURL: `http://localhost:7000/${res.data?.result?.filename}`
+                                displayName: username, photoURL: `https://service-review-api-main.vercel.app/${res.data?.result?.filename}`
                             }
                             updateProfileUser(profile)
 
                             const currentUser = {
                                 name: username,
                                 email: user.email,
-                                picture: `http://localhost:7000/${res.data?.result?.filename}`
+                                picture: `https://service-review-api-main.vercel.app/${res.data?.result?.filename}`
                             }
 
-                            axios.post('http://localhost:7000/api/v1/token/register', currentUser)
+                            axios.post('https://service-review-api-main.vercel.app/api/v1/token/register', currentUser)
                                 .then(res => {
 
 

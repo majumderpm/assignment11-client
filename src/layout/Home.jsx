@@ -47,7 +47,7 @@ const Home = () => {
     const [services, setServises] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:7000/api/v1/service/services',)
+        axios.get('https://service-review-api-main.vercel.app/api/v1/service/services',)
             .then(res => {
                 setServises(res.data?.service)
 

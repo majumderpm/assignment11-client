@@ -32,13 +32,13 @@ const AddService = () => {
 
         formData.append("avatar", imgPrev);
 
-        axios.post('http://localhost:7000/profile', formData)
+        axios.post('https://service-review-api-main.vercel.app/profile', formData)
             .then(res => {
                 console.log(res.data?.result?.filename)
                 const token = localStorage.getItem("service-review")
 
-                axios.post('http://localhost:7000/api/v1/service/create', {
-                    ...serviceData, email: user?.email, picture: `http://localhost:7000/${res.data?.result?.filename}`
+                axios.post('https://service-review-api-main.vercel.app/api/v1/service/create', {
+                    ...serviceData, email: user?.email, picture: `https://service-review-api-main.vercel.app/${res.data?.result?.filename}`
                 },
                     {
                         headers: {

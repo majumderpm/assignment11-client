@@ -48,7 +48,7 @@ const ServiceDetails = () => {
     }, [id])
 
     const allReviewSS = async () => {
-        await axios.get(`http://localhost:7000/api/v1/review/reviews/${id}`,)
+        await axios.get(`https://service-review-api-main.vercel.app/api/v1/review/reviews/${id}`,)
             .then(res => {
                 setReviewAll(res.data.review)
 
@@ -67,7 +67,7 @@ const ServiceDetails = () => {
 
     const getreviewss = async () => {
 
-        axios.get(`http://localhost:7000/api/v1/service/services/${id}`,)
+        axios.get(`https://service-review-api-main.vercel.app/api/v1/service/services/${id}`,)
             .then(res => {
                 setServises(res.data?.service)
             }).catch(err => {
@@ -77,7 +77,7 @@ const ServiceDetails = () => {
 
     const postReview = async () => {
         console.log(reviewData)
-        await axios.post(`http://localhost:7000/api/v1/review/create/${id}`, {
+        await axios.post(`https://service-review-api-main.vercel.app/api/v1/review/create/${id}`, {
             ...reviewData, email: user?.email
         })
             .then(res => {
