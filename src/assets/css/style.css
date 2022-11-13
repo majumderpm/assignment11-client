@@ -9522,3 +9522,19 @@ img.lazy-image.loaded {
 	margin-top: 20px;
 }
 
+.blog{
+	padding: 80px 0;
+}
+
+.blog_info{
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	padding: 50px;
+	margin: 30px 0 .0px;
+}
+.blog_info h2{
+	font-size: 28px;
+	margin-bottom: 20px;
+	font-weight: 500;
+	color: #c53825;
+}
