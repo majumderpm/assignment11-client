@@ -13,6 +13,21 @@ const Blog = () => {
 
 
 
+            {/* <!-- Page Banner Section --> */}
+            <section class="page-banner">
+                <div className="page-banner-bg" style={{ backgroundImage: "url(" + aboutbg + ")" }}></div>
+                <div class="bottom-rotten-curve alternate"></div>
+
+                <div class="auto-container">
+                    <h1>Blog</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><Link to={'/'}>Home</Link></li>
+                        <li class="active">Services</li>
+                    </ul>
+                </div>
+
+            </section>
+
 
 
 
